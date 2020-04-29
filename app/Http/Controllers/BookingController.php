@@ -1,0 +1,53 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Booking;
+use Illuminate\Http\Request;
+
+class BookingController extends Controller
+{
+    public function index()
+    {
+        $bookings = Booking::all();
+        return view ('booking.index', compact('bookings'));
+    }
+
+    public function create()
+    {
+        return view('booking.create');
+    }
+
+    public function store(Request $request)
+    {
+        Booking::create($request->all());
+        return redirect (route('booking.index'));
+    }
+
+    public function show(Booking $booking)
+    {
+        $bookings = Booking::all();
+        return view('booking.show', compact('bookings'));
+
+    }
+
+    public function edit(Booking $booking)
+    {   
+        return view('booking.edit', compact('booking'));
+
+    }
+
+    public function update(Request $request, Booking $booking)
+    {
+        $booking->update($request->all());
+        return redirect(route('booking.index'));
+
+    }
+
+    public function destroy(Booking $booking)
+    {
+        $booking->delete();
+        return redirect(route('booking.index'));
+
+    }
+}
