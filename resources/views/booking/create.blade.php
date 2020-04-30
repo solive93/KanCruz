@@ -25,6 +25,16 @@
                         </div>
 
                         <div class="form-group">
+                            <label>Apellido</label>
+                                <input type="email" name="client_lastname" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Documento</label>
+                                <input type="email" name="client_document" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
                             <label>Email</label>
                                 <input type="email" name="client_email" class="form-control"/>
                         </div>

@@ -12,6 +12,8 @@ class CreateBookingsTable extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->string('client_name');
+            $table->string('client_lastname');
+            $table->string('client_document');
             $table->string('client_email');
             $table->string('client_phone');
             $table->date('checkin');

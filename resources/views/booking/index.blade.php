@@ -10,12 +10,11 @@
     <table class="table">
         <thead class="thead-dark">
           <tr>
-                <th>giReserva</th>
+                <th>Reserva</th>
                 <th>Nombre</th>
+                <th>Apellido</th>
                 <th>Fecha de entrada</th>
                 <th>Fecha de salida</th>
-                <th>Desayuno</th>
-                <th>Mascotas</th>
                 <th>Acción</th>
             </tr>
         </thead>
@@ -24,15 +23,14 @@
                     <tr>
                     <th scope="row">{{$booking->id}}</th>
                     <td>{{$booking->client_name}}</td>
+                    <td>{{$booking->client_lastname}}</td>
                     <td>{{$booking->checkin}}</td>
                     <td>{{$booking->checkout}}</td>
-                    <td>{{$booking->breakfast}}</td>
-                    <td>{{$booking->pets}}</td>
                     <td>
                         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                             
                         <div class="btn-group mr-2" role="group" aria-label="First group">
-                                <a href="{{route('booking.show', $booking->id)}}" class="btn btn-secondary">Visualizar</a>
+                                <a href="{{route('booking.show', $booking->id)}}" class="btn btn-secondary">Detalles</a>
                             </div>
                             
                             <div class="btn-group mr-2" role="group" aria-label="Second group">

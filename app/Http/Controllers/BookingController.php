@@ -27,7 +27,7 @@ class BookingController extends Controller
     public function show(Booking $booking)
     {
         $bookings = Booking::all();
-        return view('booking.show', compact('bookings'));
+        return view('booking.show', compact('booking', 'bookings'));
 
     }
 

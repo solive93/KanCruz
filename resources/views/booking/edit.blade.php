@@ -14,21 +14,31 @@
 
                     <div class="card-body">
 
-                        <div class="form-group">
+                    <div class="form-group">
                             <label>Id</label>
-                                <input type="hidden" name="id" class="form-control" value="{{$booking->id}}"/>
+                                <input type="hidden" name="id" class="form-control"/>
                         </div>
 
-                        
                         <div class="form-group">
                             <label>Nombre</label>
-                                <input type="text" name="client_name" class="form-control" value="{{$booking->client_name}}"/>
+                                <input type="text" name="client_name" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Apellido</label>
+                                <input type="email" name="client_lastname" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Documento</label>
+                                <input type="email" name="client_document" class="form-control"/>
                         </div>
 
                         <div class="form-group">
                             <label>Email</label>
-                                <input type="email" name="client_email" class="form-control" value="{{$booking->client_email}}"/>
+                                <input type="email" name="client_email" class="form-control"/>
                         </div>
+
 
                         <div class="form-group">
                             <label>Telefono</label>
