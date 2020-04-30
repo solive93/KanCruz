@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 
 Route::resource('booking', 'BookingController');
+Route::resource('client', 'ClientController');
+
 
 Auth::routes();
 

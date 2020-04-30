@@ -1,12 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="text-center mt-3 mb-4">
+
+<div class="text-center mt-3 mb-4 container">
+    @if (session()->get('success'))
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+        {{session()->get('success')}} 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+         </button>
+
+        </div>
+    @endif
     <a href="{{route('booking.create')}}" class="btn btn-primary">Haz una Reserva</a>
 </div>
 
 
-<div class="col-8 m-auto">
+<div class="col-10 m-auto">
     <table class="table">
         <thead class="thead-dark">
           <tr>

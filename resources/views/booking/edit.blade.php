@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <label>Documento</label>
-                                <input type="email" name="client_document" class="form-control"/>
+                                <input type="text" name="client_document" class="form-control"/>
                         </div>
 
                         <div class="form-group">

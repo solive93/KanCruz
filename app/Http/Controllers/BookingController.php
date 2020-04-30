@@ -15,7 +15,8 @@ class BookingController extends Controller
 
     public function create()
     {
-        return view('booking.create');
+        return view('booking.create')->with('success', 'Reserva creada satisfactoriamente');
+        ;
     }
 
     public function store(Request $request)
@@ -26,8 +27,7 @@ class BookingController extends Controller
 
     public function show(Booking $booking)
     {
-        $bookings = Booking::all();
-        return view('booking.show', compact('booking', 'bookings'));
+        return view('booking.show', compact ('booking'));
 
     }
 
@@ -40,14 +40,14 @@ class BookingController extends Controller
     public function update(Request $request, Booking $booking)
     {
         $booking->update($request->all());
-        return redirect(route('booking.index'));
+        return redirect(route('booking.index'))->with('success', 'Reserva medificada satisfactoriamente');
 
     }
 
     public function destroy(Booking $booking)
     {
         $booking->delete();
-        return redirect(route('booking.index'));
+        return redirect(route('booking.index'))->with('success', 'Reserva eliminada satisfactoriamente');
 
     }
 }

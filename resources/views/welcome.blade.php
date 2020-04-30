@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="{{route('booking.index')}}">Bookings</a>
-                    
+                    <a href="{{route('client.index')}}">Clients</a>
                 </div>
             </div>
         </div>
